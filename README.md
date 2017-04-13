@@ -18,7 +18,7 @@ for x_b,y_b,z_b in iterate_minibatches(x,y,z, batchsize=2,shuffle = False):
     print(x_b, y_b, z_b)
 ```
 
-returns:<br/>
+Outputs:<br/>
 batch :<br/>
 [0 1] [10 11]<br/>
 [[ 0  1  2  3  4  5  6  7  8  9]
