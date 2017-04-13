@@ -13,7 +13,7 @@ x = np.arange(10)
 y = np.arange(10,20)
 z = np.arange(10*10).reshape((10,-1))
 
-for x_b,y_b,z_b in iterate_minibatches(x,y,z, batchsize=2):
+for x_b,y_b,z_b in iterate_minibatches(x,y,z, batchsize=2,shuffle = False):
     print("batch :")
     print(x_b, y_b, z_b)
 ```
