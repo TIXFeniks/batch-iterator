@@ -1,11 +1,19 @@
-import numpy as np
-
-def iterate_minibatches(*to_split, batchsize=1, shuffle=False):
+def iterate_minibatches(*to_split, **kwargs):
     """
         generates batches from the data, passed as first arguments
-        batchsize: the number of rows in a batch
-        shuffle: if True shuffles the data and yields shuffled batches
+        
+        arguments:
+        -batchsize: the number of rows in a batch
+        -shuffle: if True shuffles the data and yields shuffled batches
     """
+    batchsize=1
+    shuffle=False
+    if 'batchsize' in kwargs:
+        batchsize = kwargs['batchsize']
+    
+    if 'shuffle' in kwargs:
+        shuffle = kwargs['shuffle']
+
     res = [np.array(x) for x in to_split]
     size = res[0].shape[0]
     for x in res:
