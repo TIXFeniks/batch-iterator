@@ -1,3 +1,5 @@
+import numpy as np
+
 def iterate_minibatches(*to_split, **kwargs):
     """
         generates batches from the data, passed as first arguments
